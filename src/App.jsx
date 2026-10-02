@@ -3,6 +3,11 @@ import Privacy from "./Privacy";
 import Terms from "./Terms";
 import Contact from "./Contact";
 function App() {
+    const path = window.location.hash;
+
+  if (path === "#/privacy") return <Privacy />;
+  if (path === "#/terms") return <Terms />;
+  if (path === "#/contact") return <Contact />;
   return (
     <div className="website">
 
@@ -126,9 +131,9 @@ function App() {
           🔗 Visit Movies Space
         </a>
 <div className="footer-links">
-  <a href="/privacy">Privacy Policy</a>
-  <a href="/terms">Terms & Conditions</a>
-  <a href="/contact">Contact Us</a>
+<a href="#/privacy">Privacy Policy</a>
+  <a href="#/terms">Terms & Conditions</a>
+  <a href="#/contact">Contact Us</a>
 </div>
         <p className="copyright">
           © 2026 Movie Hub
